@@ -1,0 +1,43 @@
+package main
+
+type Contacts struct {
+	Code     int `json:"code"`
+	Contacts []struct {
+		AchSupported                  bool          `json:"ach_supported"`
+		CompanyName                   string        `json:"company_name"`
+		ContactID                     string        `json:"contact_id"`
+		ContactName                   string        `json:"contact_name"`
+		ContactType                   string        `json:"contact_type"`
+		CreatedTime                   string        `json:"created_time"`
+		CurrencyCode                  string        `json:"currency_code"`
+		CurrencyID                    string        `json:"currency_id"`
+		CustomFields                  []interface{} `json:"custom_fields"`
+		Email                         string        `json:"email"`
+		FirstName                     string        `json:"first_name"`
+		HasAttachment                 bool          `json:"has_attachment"`
+		IsLinkedWithZohocrm           bool          `json:"is_linked_with_zohocrm"`
+		LastModifiedTime              string        `json:"last_modified_time"`
+		LastName                      string        `json:"last_name"`
+		Mobile                        string        `json:"mobile"`
+		OutstandingPayableAmount      int           `json:"outstanding_payable_amount"`
+		OutstandingReceivableAmount   int           `json:"outstanding_receivable_amount"`
+		PaymentTerms                  int           `json:"payment_terms"`
+		PaymentTermsLabel             string        `json:"payment_terms_label"`
+		Phone                         string        `json:"phone"`
+		Source                        string        `json:"source"`
+		Status                        string        `json:"status"`
+		UnusedCreditsPayableAmount    int           `json:"unused_credits_payable_amount"`
+		UnusedCreditsReceivableAmount int           `json:"unused_credits_receivable_amount"`
+	} `json:"contacts"`
+	Message     string `json:"message"`
+	PageContext struct {
+		AppliedFilter string        `json:"applied_filter"`
+		CustomFields  []interface{} `json:"custom_fields"`
+		HasMorePage   bool          `json:"has_more_page"`
+		Page          int           `json:"page"`
+		PerPage       int           `json:"per_page"`
+		ReportName    string        `json:"report_name"`
+		SortColumn    string        `json:"sort_column"`
+		SortOrder     string        `json:"sort_order"`
+	} `json:"page_context"`
+}
